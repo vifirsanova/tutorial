@@ -3,61 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Python для начинающих: курсы индивидуально и в группе">
-    <title>Python для начинающих</title>
+    <title>AI Design Law Tutorials | НИУ ВШЭ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Python для начинающих</h1>
-    </header>
+    <div class="page-container">
+      <div class="main-content-grid">
+        <!-- Left Column - Navigation -->
+        <aside class="left-column">
+            <div class="back-link-container">
+                <a href="https://vifirsanova.github.io/hse-blog/" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    На главную
+                </a>
+            </div>
+            
+            <div class="decorative-circle large"></div>
+            <div class="decorative-circle medium"></div>
+            
+            <div class="authors-info">
+                <h3>Авторы проекта</h3>
+                <div class="author">
+                    <div class="author-name">Фирсанова Виктория Игоревна</div>
+                    <div class="author-title">Преподаватель НИУ ВШЭ СПб</div>
+                </div>
+                <div class="author">
+                    <div class="author-name">Ароян Мариам Юрьевна</div>
+                    <div class="author-title">Приглашенный преподаватель</div>
+                </div>
+            </div>
+        </aside>
 
-    <main class="container">
-        <section class="section intro">
-            <h2>Занятия по 60 минут</h2>
-            <p><strong>Индивидуально:</strong> Google Meet</p>
-            <p><strong>В группе:</strong> Google Meet | 2-3 участника</p>
-        </section>
+        <!-- Main Content Column -->
+        <main class="main-column">
+          <div class="main-content-wrapper">
+            <header class="tutorials-header">
+                <h1>Практические руководства</h1>
+                <p>Теория и код для работы с ИИ в дизайне</p>
+                <div class="decorative-line"></div>
+            </header>
 
-        <section class="section topics">
-            <h3>Темы курса:</h3>
-            <ul>
-                <li>Git</li>
-                <li>Базовый синтаксис Python</li>
-                <li>Типы и структуры данных (списки, словари и вот это вот всё)</li>
-                <li>Функции</li>
-                <li>Объектно-ориентированное программирование</li>
-                <li>Основы <strong>Data Science</strong> и <strong>Natural Language Processing</strong></li>
-            </ul>
-        </section>
+            <nav class="tab-buttons">
+                <button class="tab-button active" data-tab="prompt-engineering">Промпт-инжиниринг</button>
+                <button class="tab-button" data-tab="copyright">Авторское право</button>
+                <button class="tab-button" data-tab="ethics">Этика ИИ</button>
+            </nav>
+            
+            <div class="tab-content-container">
+              
+            <div class="tab-content active" id="prompt-engineering">
+                <article class="tutorial-article">
+                    <div class="theory-block">
+                        <h2>Основы создания эффективных промптов</h2>
+                        <p>Качественный промпт должен содержать ключевые элементы для генерации желаемого изображения:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Предмет</h4>
+                                    <p>Главный объект или сцена</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Стиль</h4>
+                                    <p>Художественный стиль или референсы</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Композиция</h4>
+                                    <p>Ракурс, перспектива, расположение</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Детали</h4>
+                                    <p>Текстуры, материалы, эффекты</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <h3>Пример промпта для MidJourney</h3>
+                            <button class="copy-button" data-target="code2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <pre><code id="code1" class="language-markdown">/imagine prompt: 
+A futuristic cityscape at sunset, 
+in the style of cyberpunk anime, 
+ultra-detailed 8k render, 
+neon lights reflecting on wet pavement, 
+flying cars and holographic advertisements, 
+dynamic perspective looking up at skyscrapers, 
+color palette of deep purples and electric blues
+--ar 16:9 --v 6</code></pre>
+                    </div>
+                </article>
+            </div>
+            
+          <div class="tab-content" id="copyright">
+                <article class="tutorial-article">
+                    <div class="theory-block">
+                        <h2>Регистрация авторских прав на AI-контент</h2>
+                        <p>В большинстве юрисдикций авторское право признается только за человеком. Однако при работе с ИИ можно защитить:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Промпты</h4>
+                                    <p>Оригинальные промпты как литературные произведения</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Произведения</h4>
+                                    <p>Финальные произведения после значительной человеческой доработки</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Подборки</h4>
+                                    <p>Уникальные компиляции и подборки, созданные человеком</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>В США требуется регистрация в Copyright Office с указанием использования ИИ-инструментов.</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <h3>Шаблон лицензии для AI-дизайна</h3>
+                            <button class="copy-button" data-target="code3">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <pre><code id="code2" class="language-html">&lt;!-- Creative Commons License with AI amendments --&gt;
+&lt;div class="license"&gt;
+  &lt;p&gt;This work is licensed under &lt;a href="#"&gt;CC BY-NC-SA 4.0&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;With additional terms:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;AI-generated elements are identified in metadata&lt;/li&gt;
+    &lt;li&gt;Original prompts are included as attribution&lt;/li&gt;
+    &lt;li&gt;Commercial use requires human modification ≥30%&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </article>
+            </div>
+          
+            <div class="tab-content" id="ethics">
+                <article class="tutorial-article">
+                    <div class="theory-block">
+                        <h2>Этические принципы AI-дизайна</h2>
+                        <p>При работе с генеративным ИИ следует учитывать:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Прозрачность</h4>
+                                    <p>Всегда указывать использование ИИ</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Оригинальность</h4>
+                                    <p>Избегать прямого копирования стиля живых художников</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Ответственность</h4>
+                                    <p>Проверять контент на стереотипы и предвзятость</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-circle"></div>
+                                <div>
+                                    <h4>Экология</h4>
+                                    <p>Учитывать углеродный след обучения моделей</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Рекомендуется разрабатывать внутренние этические кодексы для студий.</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <h3>Чеклист для этичного промпт-дизайна</h3>
+                            <button class="copy-button" data-target="code1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <pre><code id="code3" class="language-json">{
+  "ethics_checklist": {
+    "attribution": {
+      "human_artists": "List referenced living artists",
+      "cultural_references": "Identify cultural sources"
+    },
+    "bias_check": [
+      "Gender representation",
+      "Racial diversity",
+      "Stereotype avoidance"
+    ],
+    "environmental_impact": {
+      "model_size": "Prefer smaller models when possible",
+      "local_processing": "Use local inference where feasible"
+    }
+  }
+}</code></pre>
+                    </div>
+                </article>
+            </div>
+          </div>
+        </div>
+        </main>
 
-        <section class="section about-me">
-            <h3>Обо мне:</h3>
-            <ul>
-                <li><strong>Преподаватель НИУ ВШЭ</strong>, занимаюсь с гуманитариями, умею подать самый сложный материал доступно и увлекательно</li>
-                <li>Мои курсы — <strong>лучшие</strong> по результатам студенческой оценки преподавания ВШЭ</li>
-                <li>Спикер множества <strong>топовых конференций</strong> по AI, веб-технологиям и цифровым решениям в России и мире</li>
-                <li>Разрабатываю <strong>собственные нейросетевые модели</strong></li>
-                <li>Создаю персонализированные учебные материалы под <strong>ваши карьерные цели</strong> </li>
-            </ul>
-        </section>
-
-        <section class="section interview">
-            <h3>Интервью со мной:</h3>
-            <p><a href="https://spb.hse.ru/ma/language/news/927202852.html" target="_blank">Читать интервью</a></p>
-        </section>
-
-        <section class="section contacts">
-            <h3>Контакты:</h3>
-            <p>TG: <a href="tg://resolve?domain=vifirsanova">vifirsanova</a></p>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>© missvector 2024</p>
-        <p>vifirsanova.github.io</p>
+        <!-- Right Column - Resources -->
+        <aside class="right-column">
+            <div class="resources-block">
+                <h3>Полезные ресурсы</h3>
+                <ul class="resource-list">
+                    <li>
+                        <a href="#" class="resource-link">
+                            <div class="resource-circle"></div>
+                            <span>MidJourney Documentation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="resource-link">
+                            <div class="resource-circle"></div>
+                            <span>Copyright.gov</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="resource-link">
+                            <div class="resource-circle"></div>
+                            <span>AI Ethics Guidelines</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="decorative-circle small"></div>
+        </aside>
+    
+ </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">AI Design Law</div>
+            <div class="footer-copyright">© 2025 НИУ ВШЭ, Санкт-Петербург</div>
+        </div>
     </footer>
-
-    <script src="scripts.js"></script>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
